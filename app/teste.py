@@ -1,4 +1,4 @@
-from models import Games
+from models.games import Games
 from app import app
 
 if __name__ == '__main__':
