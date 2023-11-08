@@ -1,5 +1,6 @@
 from models.games import Games
-from app import app
+from app.app import app
+
 
 if __name__ == '__main__':
     with app.app_context():

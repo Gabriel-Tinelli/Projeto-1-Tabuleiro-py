@@ -1,5 +1,4 @@
 from app import db
-from sqlalchemy import Enum
 
 class Games(db.Model):
     game_id = db.Column(db.Integer, primary_key=True)

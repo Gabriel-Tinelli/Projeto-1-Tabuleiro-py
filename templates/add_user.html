@@ -1,0 +1,68 @@
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+<div class="alert alert-dark alert-dismissible fade show" role="alert">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+
+{% endfor %}
+
+{% if name %}
+<h1>Olá!</h1>
+<br /><br /><br />
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+</table>
+<br />
+
+<br /><br />
+
+{% else %}
+<h1>Novo usuário</h1>
+<br />
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    {{ form.name.label(class="form-label") }}
+    {{ form.name(class="form-control") }}
+    <br/>
+    {{ form.email.label(class="form-label") }}
+    {{ form.email(class="form-control") }}
+    <br/>
+    {{ form.password_hash.label(class="form-label") }}
+    {{ form.password_hash(class="form-control") }}
+    <br/>
+    {{ form.password_hash2.label(class="form-label") }}
+    {{ form.password_hash2(class="form-control") }}
+    <br/>
+
+    {{ form.submit(class="btn btn-dark") }}
+
+   
+
+</form>
+
+<br /><br /><br />
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+
+</table>
+
+{% endif %}
+
+{% endblock %}

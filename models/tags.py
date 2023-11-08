@@ -1,5 +1,5 @@
 from sqlalchemy import Enum
-from app import db
+from app.app import db
 
 class Tags(db.Model):
     tag_id = db.Column(db.Integer, primary_key=True)

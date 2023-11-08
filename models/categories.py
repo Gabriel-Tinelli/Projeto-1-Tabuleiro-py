@@ -1,4 +1,4 @@
-from app import db
+from app.app import db
 from sqlalchemy import Enum
 
 class Categories(db.Model):
